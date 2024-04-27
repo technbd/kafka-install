@@ -173,6 +173,20 @@ foo
 bar
 ```
 
+Assuming you are running Kafka on localhost, you can list the connectors using the following:
+
+```
+curl "http://localhost:8083/connectors"
+["local-file-source","local-file-sink"]
+```
+
+
+You can list the status of a connector using something like the following:
+```
+curl -s "http://localhost:8083/connectors/local-file-source/status" | jq '.'
+curl -s "http://localhost:8083/connectors/local-file-sink/status" | jq '.'
+```
+
 
 ### References:
 
