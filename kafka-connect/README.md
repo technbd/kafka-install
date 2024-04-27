@@ -160,7 +160,7 @@ save and exit
 We can inspect the content of the topic "file-source-test" using the command line:
 
 ```
-./bin/kafka-console-consumer.sh --bootstrap-server  192.168.10.190:9092 --from-beginning --topic file-source-test
+./bin/kafka-console-consumer.sh --bootstrap-server  192.168.0.8:9092 --from-beginning --topic file-source-test
 ```
 
 
