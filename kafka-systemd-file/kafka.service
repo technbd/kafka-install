@@ -1,0 +1,20 @@
+[Unit]
+Description=Apache Kafka server (broker)
+Documentation=http://kafka.apache.org/documentation.html
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target kafka-zookeeper.service
+
+[Service]
+Type=simple
+
+User=rcms
+Group=rcms
+
+Environment=JAVA_HOME=/apps/jdk-1.8/jdk1.8.0_201
+
+ExecStart=/home/rcms/kafka/bin/kafka-server-start.sh /home/rcms/kafka/config/server.properties
+ExecStop=/home/rcms/kafka/bin/kafka-server-stop.sh
+
+[Install]
+WantedBy=multi-user.target
+
