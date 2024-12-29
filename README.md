@@ -29,6 +29,11 @@ echo $JAVA_HOME
 cd /opt/
 wget https://downloads.apache.org/kafka/3.7.0/kafka_2.13-3.7.0.tgz
 
+or,
+
+wget https://archive.apache.org/dist/kafka/3.7.0/kafka_2.13-3.7.0.tgz
+
+
 tar -xvf kafka_2.13-3.7.0.tgz
 mv kafka_2.13-3.7.0 kafka
 ```
